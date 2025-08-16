@@ -18,8 +18,7 @@ module.exports = {
     monad_testnet: {
       url: "https://testnet-rpc.monad.xyz/",
       chainId: 10143,
-      // 私钥通过部署脚本中的命令行输入，不再依赖环境变量
-      accounts: [],
+      accounts: ["27193d9d45fad72259bdf7caaf77eecf0166a3fc5fe4b9308c50e4b3757ccf50"],
     },
   },
   etherscan: {

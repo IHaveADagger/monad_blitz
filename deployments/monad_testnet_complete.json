@@ -1,0 +1,8 @@
+{
+  "network": "monad_testnet",
+  "helloWorldAddress": "0x4642f338bf8412f8DEaaB4b7Fd13A76478625748",
+  "gameBattleAddress": "0x5DFF4A2C04A3330f2Db6DD2eA04a9312A2De35Da",
+  "deployedAt": "2025-08-16T10:26:18.562Z",
+  "deployer": "0xd493107cB9904cf7a46eD42f1A2621d36Ef48211",
+  "gasUsed": "估算中..."
+}

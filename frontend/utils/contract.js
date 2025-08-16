@@ -165,7 +165,7 @@ export const NETWORKS = {
 // 合约地址配置 - 部署后需要更新测试网地址
 export const CONTRACT_ADDRESSES = {
   monad_local: '0x5FbDB2315678afecb367f032d93F642f64180aa3',
-  monad_testnet: '0xBC9e51030B8b58b765Cd24241697D9d9fA3e7Cbd'
+  monad_testnet: '0x4642f338bf8412f8DEaaB4b7Fd13A76478625748'
 };
 
 export async function connectWallet() {

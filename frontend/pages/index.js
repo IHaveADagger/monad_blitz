@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 // 完整的合约ABI - 从编译后的artifacts中获取
 const CONTRACT_ABI = [
@@ -141,7 +142,7 @@ const CONTRACT_ABI = [
 // 合约地址配置 - 部署后需要更新测试网地址
 const CONTRACT_ADDRESSES = {
   monad_local: '0x5FbDB2315678afecb367f032d93F642f64180aa3',
-  monad_testnet: '0xBC9e51030B8b58b765Cd24241697D9d9fA3e7Cbd'
+  monad_testnet: '0x4642f338bf8412f8DEaaB4b7Fd13A76478625748'
 };
 
 // 网络配置
@@ -171,6 +172,7 @@ const NETWORKS = {
 };
 
 export default function Home() {
+  const router = useRouter();
   const [account, setAccount] = useState('');
   const [isConnected, setIsConnected] = useState(false);
   const [currentNetwork, setCurrentNetwork] = useState('monad_local');
@@ -542,6 +544,11 @@ export default function Home() {
     }
   };
 
+  // 跳转到游戏页面
+  const handleStartGame = () => {
+    router.push('/game');
+  };
+
   return (
     <div style={{ padding: '40px', maxWidth: '800px', margin: '0 auto', fontFamily: 'Arial, sans-serif' }}>
       <h1 style={{ textAlign: 'center', color: '#333', marginBottom: '30px' }}>
@@ -861,10 +868,27 @@ export default function Home() {
                 border: 'none',
                 borderRadius: '4px',
                 cursor: 'pointer',
-                fontSize: '16px'
+                fontSize: '16px',
+                marginRight: '10px'
               }}
             >
               刷新数据
+            </button>
+            <button 
+              onClick={handleStartGame}
+              disabled={!isConnected}
+              style={{
+                padding: '12px 24px',
+                backgroundColor: isConnected ? '#ff6b35' : '#cccccc',
+                color: 'white',
+                border: 'none',
+                borderRadius: '4px',
+                cursor: isConnected ? 'pointer' : 'not-allowed',
+                fontSize: '16px',
+                fontWeight: 'bold'
+              }}
+            >
+              🎮 开打
             </button>
           </div>
 
