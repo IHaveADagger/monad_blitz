@@ -15,10 +15,11 @@ module.exports = {
       }
     },
     // Monad测试网 - 生产环境
-    monad: {
-      url: "https://testnet1.monad.xyz",
-      chainId: 41454,
-      accounts: process.env.PRIVATE_KEY && process.env.PRIVATE_KEY !== "your_private_key_here" ? [process.env.PRIVATE_KEY] : [],
+    monad_testnet: {
+      url: "https://testnet-rpc.monad.xyz/",
+      chainId: 10143,
+      // 私钥通过部署脚本中的命令行输入，不再依赖环境变量
+      accounts: [],
     },
   },
   etherscan: {
@@ -27,11 +28,11 @@ module.exports = {
     },
     customChains: [
       {
-        network: "monad",
-        chainId: 41454,
+        network: "monad_testnet",
+        chainId: 10143,
         urls: {
-          apiURL: "https://testnet1.monad.xyz",
-          browserURL: "https://testnet1.monad.xyz"
+          apiURL: "https://testnet.monadexplorer.com/",
+          browserURL: "https://testnet.monadexplorer.com/"
         }
       }
     ]

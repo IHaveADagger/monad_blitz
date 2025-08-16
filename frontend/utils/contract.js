@@ -148,12 +148,24 @@ export const NETWORKS = {
     },
     rpcUrls: ['http://127.0.0.1:8545'],
     blockExplorerUrls: [],
+  },
+  monad_testnet: {
+    chainId: '0x279f', // 10143 in hex
+    chainName: 'Monad Testnet',
+    nativeCurrency: {
+      name: 'MON',
+      symbol: 'MON',
+      decimals: 18,
+    },
+    rpcUrls: ['https://testnet-rpc.monad.xyz/'],
+    blockExplorerUrls: ['https://testnet.monadexplorer.com/'],
   }
 };
 
-// 合约地址配置
+// 合约地址配置 - 部署后需要更新测试网地址
 export const CONTRACT_ADDRESSES = {
-  monad_local: '0x5FbDB2315678afecb367f032d93F642f64180aa3'
+  monad_local: '0x5FbDB2315678afecb367f032d93F642f64180aa3',
+  monad_testnet: '0xBC9e51030B8b58b765Cd24241697D9d9fA3e7Cbd'
 };
 
 export async function connectWallet() {

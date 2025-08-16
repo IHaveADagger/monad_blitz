@@ -1,0 +1,8 @@
+{
+  "network": "monad_testnet",
+  "chainId": 10143,
+  "contractAddress": "0xBC9e51030B8b58b765Cd24241697D9d9fA3e7Cbd",
+  "deployer": "0xd493107cB9904cf7a46eD42f1A2621d36Ef48211",
+  "deploymentTime": "2025-08-16T09:38:30.242Z",
+  "blockExplorer": "https://testnet.monadexplorer.com/address/0xBC9e51030B8b58b765Cd24241697D9d9fA3e7Cbd"
+}
