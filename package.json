@@ -1,0 +1,24 @@
+{
+  "name": "monad-hello-world",
+  "version": "1.0.0",
+  "description": "A simple Web3 demo for Monad testnet",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js --network monad_local",
+    "node": "hardhat node",
+    "dev": "cd frontend && npm run dev",
+    "start": "npm run node",
+    "install-frontend": "cd frontend && npm install",
+    "test": "hardhat test",
+    "clean": "hardhat clean"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^16.3.1"
+  }
+} 
